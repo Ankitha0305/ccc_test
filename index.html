@@ -1,0 +1,210 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+  <title>test page</title>  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/main_baselo.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="script/main_baselo.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nova+Flat" rel="stylesheet">
+     <!--offline--><link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+     <!--offline--><script src="css/bootstrap.js"></script>
+  <style type="text/css">
+  	.parallax-window {
+	    min-height: 400px;
+	    background: transparent;
+	}
+	.nav:hover{
+		background-color: white;
+		color: black !important;
+		-webkit-transition: background-color 1s,color 1s; /* For Safari 3.1 to 6.0 */
+    	transition: background-color 1s,color 1s;
+	}
+	.parallax {
+    /* The image used */
+    background-image: url("bha.jpg");
+
+    /* Set a specific height */
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	}
+	.carousel_size{
+		height: 200px;
+	}
+  </style>
+</head>
+<body onload="typeWriter();">
+
+  <script>
+    var i = 0;
+    var txt = 'CREATIVE COMPUTING CLUB !';
+    var speed = 50;
+
+    function typeWriter() {	
+      if (i < txt.length) {
+        document.getElementById("typer").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+      else{
+        showButton();
+      }
+    }
+
+    function showButton() {
+      $(".btn").fadeIn(1000);
+    }
+    $(document).ready(function(){
+        $(".btn").hide();
+        $("#main").hide();
+        $(".btn-success").click(function(){
+          $("#popover").slideUp(1000,function() {
+            $("#main").fadeIn(1000);
+          });
+        });
+    });
+  </script>
+<!--Time of loading-->
+<div  style="background-color: grey;height: 100%;text-align: center;z-index: 10;" id="popover">
+	<img src="ccc_2.png" style="margin-top: 300px;" height="200">
+	<h1 style="color:white;font-family: 'Cinzel Decorative', cursive;" id="typer"></h1>
+	<button class="btn btn-success">Take a look !</button>
+</div>
+
+<!-- Time to end loader --> 
+<div id="main"> 
+	<!-- Toolbar -->
+	<div style="background-color:black;position: fixed;z-index: 100;" class="col-sm-12 col-md-12 col-xs-12">
+		<img src="nop.png" style="padding-left:0;float: left;margin-top: 7px;" width="121px" height="40px" class="col-sm-1">
+		<h1  class="col-sm-1" style="color:white;padding-left:0px;font-family: 'Cinzel Decorative', cursive;margin-top: 7px;font-family: 'Nova Flat', cursive;">Club</h1>
+		<div class="col-sm-2 col-sm-offset-8" style="height: 57px;">
+			<span class="col-sm-6 nav" style="color:white;height:100%;font-family: 'Nova Flat', cursive;cursor: pointer;" href="#"><center><div style="margin-top: 15px;"><span class="glyphicon glyphicon-log-in"></span> Login</div></center></span>
+			<span class="col-sm-6 nav" style="color:white;height:100%;font-family: 'Nova Flat', cursive;cursor: pointer;" href="#"><center><div style="margin-top: 15px;"><span class="glyphicon glyphicon-save"></span> Register</div></center></span>
+		</div>
+	</div>
+
+	<!-- Content -->
+	<div id="myCarousel" class="carousel slide carousel-size" data-ride="carousel">
+	<!-- Indicators -->
+	<ol class="carousel-indicators">
+	  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+	  <li data-target="#myCarousel" data-slide-to="1"></li>
+	  <li data-target="#myCarousel" data-slide-to="2"></li>
+	</ol>
+
+	<!-- Wrapper for slides -->
+	<div class="carousel-inner">
+	  <div class="item active">
+	    <img src="slide1.jpg" alt="Slide 1" style="width:100%; height: 100%">
+	    <div class="carousel-caption">
+	      <h3>Bharath Univ</h3>
+	      <p>It is a fun palce to study</p>
+	    </div>
+	  </div>
+
+	  <div class="item">
+	    <img src="slide2.jpg" alt="Slide 2" style="width:100%; height: 100%">
+	    <div class="carousel-caption">
+	      <h3>Assasins creed aa majaka</h3>
+	      <p>Thank you, Folks!</p>
+	    </div>
+	  </div>
+
+	  <div class="item">
+	    <img src="slide3.jpg" alt="New York" style="width:100%; height: 100%">
+	    <div class="carousel-caption">
+	      <h3>Registration</h3>
+	      <p>Reg only for club members</p>
+	    </div>
+	  </div>
+
+	</div>
+
+	<!-- Left and right controls -->
+	<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+	  <span class="glyphicon glyphicon-chevron-left"></span>
+	  <span class="sr-only">Previous</span>
+	</a>
+	<a class="right carousel-control" href="#myCarousel" data-slide="next">
+	  <span class="glyphicon glyphicon-chevron-right"></span>
+	  <span class="sr-only">Next</span>
+	</a>
+	</div>
+	<div class="jumbotron">
+	    <h1 style="font-family: 'Cinzel Decorative', cursive;margin-top: 20px;">Bharath University</h1>
+	    <p>Some content goes here...</p>
+	</div>
+</div>
+          
+            <!--<div id="main"> 
+             <center>
+               <a href="www.bharath.ac.in">
+                <div style="background-color:white;position:fixed;"><img src="b_logo.png"></div>
+               </a>
+             </center>
+          <div id="f1_container">
+          <div id="f1_card">
+            <div class="face">
+              <img src="bha.jpg" class="bha">
+            </div>
+            <div class="back face">
+              <p style="color:red; font-size:30px;">N.O.P</p> 
+                 <p><i>This is the Home page of our club N.O.P</i></p>
+
+            </div>
+          </div>
+          </div> 
+
+          <img src="real_stu.png" class="stu">
+
+
+               <!--  <div class="row">
+                  <div class="col-sm-18">
+                     <div class="container_main">      
+                      <img src="palace.jpg" class="image1">
+                       <div class="overlay">
+                         palace text starts here 
+                         <div class="palace_text">From the below link<br>you can access your portal<br>where you can chat,palce poles<br>comment,apply for events<br>and much more fun...<br><a href="login">My PALACE</a>
+                         </div>
+                       </div>
+                     </div>
+                  </div>
+
+              <img src="nop.png" class="nop_icon" > 
+               <a href="registration"><img src="reg2.gif" class="reg_text"> </a> 
+
+
+
+             <a href="developers/index.html">
+              <img src="de.jpg"
+               class="pic3"
+               onmouseover="this.src='dev2.jpg';"
+               onmouseout="this.src='dev.jpg';">
+             </a> 
+
+
+          </div>
+
+
+          <div id="all" onclick="shrink(this)">
+
+          <p id="text_out">Click here...<br>LECTURER LOGIN</p>
+
+          <form action="lec_check.php" method="post" id="input" class="form-inline">
+          <input type="text" name="uname" size="30" placeholder="USERNAME" class="form-control">
+          <input type= "pasword" name="pass" size="30" placeholder="PASSWORD" class="form-control">
+          <input type="submit" value="LOGIN" name="ok" class="btn btn-success">
+          </form>
+              </div> 
+
+</body>
+</html>
